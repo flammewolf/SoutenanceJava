@@ -20,7 +20,7 @@ public class MainGUI extends Application {
         Group root = new Group();
 
         root.getChildren().add(clientPanel);
-        Scene scene = new Scene(root, 600, 500);
+        Scene scene = new Scene(root, 1000, 750);
         stage.setTitle("Chat de ouf");
         stage.setScene(scene);
         stage.show();

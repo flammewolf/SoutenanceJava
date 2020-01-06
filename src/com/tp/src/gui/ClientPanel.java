@@ -17,7 +17,6 @@ import javafx.scene.text.TextFlow;
  */
 public class ClientPanel extends Parent{
     
-    
     private TextArea textToSend;
     private ScrollPane scrollReceivedText;
     private TextFlow receivedText;
@@ -25,19 +24,32 @@ public class ClientPanel extends Parent{
     private Button clearBtn;
 
     public ClientPanel() {
+        
         this.textToSend = new TextArea();
+        textToSend.setLayoutX(80);
+        textToSend.setLayoutY(550);
+        textToSend.setPrefWidth(650);
+        textToSend.setPrefHeight(100);
         
         this.scrollReceivedText = new ScrollPane();
         scrollReceivedText.setLayoutX(50);
         scrollReceivedText.setLayoutY(50);
-        scrollReceivedText.setPrefWidth(400);
-        scrollReceivedText.setPrefHeight(350);
+        scrollReceivedText.setPrefWidth(575);
+        scrollReceivedText.setPrefHeight(300);
         
         this.receivedText = new TextFlow();
         
+        
         this.sendBtn = new Button();
+        sendBtn.setText("Envoyer");
+        sendBtn.setLayoutX(750); // position longueur
+        sendBtn.setLayoutY(575);
         
         this.clearBtn = new Button();
+        clearBtn.setText("Effacer");
+        clearBtn.setLayoutX(750);
+        clearBtn.setLayoutY(650);
+        
      
         
         this.getChildren().add(scrollReceivedText);
