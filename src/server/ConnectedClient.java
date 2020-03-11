@@ -33,7 +33,7 @@ public class ConnectedClient implements Runnable {
         this.id = idCounter;
         idCounter++;
         out = new ObjectOutputStream(socket.getOutputStream());
-        System.out.println(" Une Nouvelle personne arrive : id = " + id);
+        System.out.println("Arrivée sur scène de : personne N° = " + id);
     }
     
     /**

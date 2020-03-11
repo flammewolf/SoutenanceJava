@@ -1,4 +1,4 @@
-package server;
+package util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

@@ -27,7 +27,7 @@ public class Server {
     
     public void addClient(ConnectedClient newClient) throws IOException {
         for (ConnectedClient client : clients) {
-            client.sendMessage(new Message("Serveur", "Le client " + newClient.getId() + " vient de se connecter"));
+            client.sendMessage(new Message("Serveur", "Arrivée sur scène de la personne n° " + newClient.getId()));
         }
         this.clients.add(newClient);
     }
@@ -43,9 +43,9 @@ public class Server {
     public void disconnectedClient(ConnectedClient discClient) throws IOException {
         discClient.closeClient();
         clients.remove(discClient);
-        System.out.println("Connexion fermée : Le Client " + discClient.getId() + " nous a quitté.");
+        System.out.println("Connexion fermée : La personne n° " + discClient.getId() + " nous a plaqué...");
         for (ConnectedClient client : clients) {
-            client.sendMessage(new Message("Serveur", "Le client " + discClient.getId() + " nous a quitté"));
+            client.sendMessage(new Message("Serveur", "La personne n° " + discClient.getId() + " nous a plaqué..."));
         }
     }
     

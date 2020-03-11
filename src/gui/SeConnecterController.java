@@ -10,7 +10,7 @@ package gui;
  * @author Quentin
  */
 import client.Client;
-import static server.AES.*;
+import static util.AES.*;
 import util.ConnectionUtil;
 import java.net.URL;
 import java.sql.Connection;

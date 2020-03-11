@@ -5,7 +5,7 @@ package gui;
  * @author Quentin
  */
 import static gui.SeConnecterController.infoBox;
-import static server.AES.encrypt;
+import static util.AES.encrypt;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
