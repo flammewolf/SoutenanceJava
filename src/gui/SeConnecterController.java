@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package gui;
+
 /**
  *
  * @author Quentin
  */
-import javafx.application.Application;
 import client.Client;
 import static server.AES.*;
 import util.ConnectionUtil;
@@ -16,7 +16,6 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +27,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -69,7 +67,13 @@ public class SeConnecterController implements Initializable {
             preparedStatement.setString(2, decryptedPassword);
             resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
-                infoBox("Erreur ! Username ou mot de passe incorrect", null, "Erreur");
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText("Vous avez échouer...");
+                alert.setContentText("nom d'utilisateur ou mot de passe incorrect");
+
+                alert.showAndWait();
+                //infoBox("Erreur ! Username ou mot de passe incorrect", null, "Erreur");
             } else {
                 infoBox("Connexion réussi !", null, "Succès");
                 Node node = (Node) event.getSource();
@@ -82,14 +86,10 @@ public class SeConnecterController implements Initializable {
                 client.clientPanel = clientPanel;
                 Group root = new Group();
                 root.getChildren().add(clientPanel);
-                Scene scene = new Scene(root, 460, 500);
+                Scene scene = new Scene(root, 650, 550);
                 stage.setTitle("Client chat réseau");
                 stage.setScene(scene);
                 stage.show();
-
-                /*scene = new Scene(FXMLLoader.load(getClass().getResource("chat.fxml")));
-                dialogStage.setScene(scene);
-                dialogStage.show();*/
             }
         } catch (Exception e) {
             e.printStackTrace();

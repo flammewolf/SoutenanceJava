@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author p1623040
+ * @author Quentin
  */
 public class Server {
     private int port;

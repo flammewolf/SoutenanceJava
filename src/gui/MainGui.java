@@ -1,5 +1,5 @@
 /*
- * Auteur : Jules BOURDAIS
+ * Auteur : Quentin
  */
 package gui;
 
@@ -14,7 +14,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Classe "point de départ" du programme pour l'interface graphique
+ * Classe principale du programme côté l'interface graphique
  */
 public class MainGui extends Application {
 
@@ -31,7 +31,7 @@ public class MainGui extends Application {
                 
             }
 
-            Parent root = FXMLLoader.load(getClass().getResource("seConnecter.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("seConnecter.fxml")); //lancement du FMXL 
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

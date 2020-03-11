@@ -1,5 +1,5 @@
 /*
- * Auteur : Jules BOURDAIS
+ * Auteur : Quentin
  */
 package gui;
 
@@ -34,15 +34,15 @@ public class ClientPanel extends Parent {
         this.client = client;
         this.textToSend = new TextArea();
         textToSend.setLayoutX(50);
-        textToSend.setLayoutY(430);
-        textToSend.setPrefHeight(60);
-        textToSend.setPrefWidth(290);
+        textToSend.setLayoutY(440);
+        textToSend.setPrefHeight(70);
+        textToSend.setPrefWidth(440);
         
         this.scrollReceivedText = new ScrollPane();
         scrollReceivedText.setLayoutX(50);
         scrollReceivedText.setLayoutY(20);
         scrollReceivedText.setPrefHeight(400);
-        scrollReceivedText.setPrefWidth(350);
+        scrollReceivedText.setPrefWidth(550);
         
         this.receivedText = new TextFlow();
         receivedText.setLayoutX(50);
@@ -51,18 +51,18 @@ public class ClientPanel extends Parent {
         receivedText.setPrefWidth(40);
         
         this.sendBtn = new Button();
-        sendBtn.setLayoutX(350);
+        sendBtn.setLayoutX(500);
         sendBtn.setLayoutY(430);
         sendBtn.setPrefHeight(20);
-        sendBtn.setPrefWidth(50);
-        sendBtn.setText("Send");
+        sendBtn.setPrefWidth(100);
+        sendBtn.setText("Envoyer");
         
         this.clearBtn = new Button();
-        clearBtn.setLayoutX(350);
-        clearBtn.setLayoutY(460);
+        clearBtn.setLayoutX(500);
+        clearBtn.setLayoutY(470);
         clearBtn.setPrefHeight(20);
-        clearBtn.setPrefWidth(50);
-        clearBtn.setText("Clear");
+        clearBtn.setPrefWidth(100);
+        clearBtn.setText("Effacer");
         
         scrollReceivedText.setContent(receivedText);
         scrollReceivedText.vvalueProperty().bind(receivedText.heightProperty());

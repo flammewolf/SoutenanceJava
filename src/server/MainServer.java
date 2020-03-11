@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author p1623040
+ * @author Quentin
  */
 public class MainServer {
 
